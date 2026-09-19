@@ -1,0 +1,6 @@
+Name: Ashay
+Age: 20
+Weight: 50.0
+Height: 170.0
+City: Kolhapur
+Phone: 1234567890
