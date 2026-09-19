@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="football.xsl"?>
+
+<footballplayers>
+
+<player>
+<name>Ashay Vitthal Patakare</name>
+<country>India</country>
+<position>Midfielder</position>
+</player>
+
+<player>
+<name>Lionel Messi</name>
+<country>Argentina</country>
+<position>Forward</position>
+</player>
+
+<player>
+<name>Cristiano Ronaldo</name>
+<country>Portugal</country>
+<position>Forward</position>
+</player>
+
+<player>
+<name>Neymar Jr</name>
+<country>Brazil</country>
+<position>Winger</position>
+</player>
+
+</footballplayers>

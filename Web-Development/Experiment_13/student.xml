@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet type="text/xsl" href="student.xsl"?>
+
+<students>
+
+<student>
+<name>Ashay Vitthal Patakare</name>
+<rollno>56</rollno>
+<branch>CSE</branch>
+<city>Sangli</city>
+</student>
+
+<student>
+<name>Siddhesh Madekar</name>
+<rollno>101</rollno>
+<branch>CSE</branch>
+<city>Kolhapur</city>
+</student>
+
+<student>
+<name>Rahul Patil</name>
+<rollno>102</rollno>
+<branch>IT</branch>
+<city>Pune</city>
+</student>
+
+<student>
+<name>Priya Sharma</name>
+<rollno>103</rollno>
+<branch>AIML</branch>
+<city>Mumbai</city>
+</student>
+
+</students>

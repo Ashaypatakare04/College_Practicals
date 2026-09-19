@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PulseVoice Login</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <style>
+    body{
+      background-image:
+        linear-gradient(to bottom right, rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
+        url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1920&q=80');
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .glass{
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    input{
+      outline: none;
+    }
+
+    input:focus{
+      border-color: #6366f1;
+      box-shadow: 0 0 0 2px rgba(99,102,241,0.3);
+    }
+  </style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center font-sans">
+
+  <div class="glass w-full max-w-md p-8 rounded-2xl shadow-2xl">
+
+    <div id="loginSection">
+
+      <h1 class="text-3xl font-bold text-center text-white mb-6">
+        Sign In
+      </h1>
+
+      <form class="space-y-4">
+
+        <div>
+          <label class="block text-white mb-1">Email</label>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="w-full px-4 py-2 rounded-lg border"
+            required
+          >
+        </div>
+
+        <div>
+          <label class="block text-white mb-1">Password</label>
+          <input
+            type="password"
+            placeholder="Enter your password"
+            class="w-full px-4 py-2 rounded-lg border"
+            required
+          >
+        </div>
+
+        <div class="text-right">
+          <a href="#" id="forgotBtn"
+             class="text-sm text-indigo-200 hover:underline">
+             Forgot Password?
+          </a>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded-lg font-semibold transition">
+          Login
+        </button>
+
+        <button
+          type="button"
+          class="w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded-lg font-semibold flex items-center justify-center transition">
+
+          <img
+            src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+            class="w-5 h-5 mr-2">
+
+          Sign in with Google
+        </button>
+
+      </form>
+
+      <p class="text-center text-white mt-5">
+        Don't have an account?
+        <a href="#" id="showSignup" class="text-indigo-200 hover:underline">
+          Sign Up
+        </a>
+      </p>
+
+    </div>
+
+    <div id="signupSection" class="hidden">
+
+      <h1 class="text-3xl font-bold text-center text-white mb-6">
+        Create Account
+      </h1>
+
+      <form class="space-y-4">
+
+        <div>
+          <label class="block text-white mb-1">Email</label>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="w-full px-4 py-2 rounded-lg border"
+            required
+          >
+        </div>
+
+        <div>
+          <label class="block text-white mb-1">Password</label>
+          <input
+            type="password"
+            placeholder="Create password"
+            class="w-full px-4 py-2 rounded-lg border"
+            required
+          >
+        </div>
+
+        <div>
+          <label class="block text-white mb-1">Confirm Password</label>
+          <input
+            type="password"
+            placeholder="Confirm password"
+            class="w-full px-4 py-2 rounded-lg border"
+            required
+          >
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg font-semibold transition">
+          Create Account
+        </button>
+
+      </form>
+
+      <p class="text-center text-white mt-5">
+        Already have an account?
+        <a href="#" id="showLogin" class="text-indigo-200 hover:underline">
+          Login
+        </a>
+      </p>
+
+    </div>
+
+  </div>
+
+  <div
+    id="modal"
+    class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center">
+
+    <div class="bg-white w-80 p-6 rounded-xl shadow-xl">
+
+      <h2 class="text-2xl font-bold text-indigo-600 text-center mb-4">
+        Reset Password
+      </h2>
+
+      <input
+        type="email"
+        placeholder="Enter your email"
+        class="w-full px-4 py-2 border rounded-lg mb-4">
+
+      <button
+        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded-lg mb-2">
+        Send Reset Link
+      </button>
+
+      <button
+        id="closeModal"
+        class="w-full bg-gray-400 hover:bg-gray-500 text-white py-2 rounded-lg">
+        Cancel
+      </button>
+
+    </div>
+  </div>
+
+  <script>
+
+    const loginSection = document.getElementById("loginSection");
+    const signupSection = document.getElementById("signupSection");
+
+    const showSignup = document.getElementById("showSignup");
+    const showLogin = document.getElementById("showLogin");
+
+    const modal = document.getElementById("modal");
+    const forgotBtn = document.getElementById("forgotBtn");
+    const closeModal = document.getElementById("closeModal");
+
+    showSignup.addEventListener("click", function(e){
+      e.preventDefault();
+      loginSection.classList.add("hidden");
+      signupSection.classList.remove("hidden");
+    });
+
+    showLogin.addEventListener("click", function(e){
+      e.preventDefault();
+      signupSection.classList.add("hidden");
+      loginSection.classList.remove("hidden");
+    });
+
+    forgotBtn.addEventListener("click", function(e){
+      e.preventDefault();
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    });
+
+    closeModal.addEventListener("click", function(){
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    });
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML Tags - Lab Archive</title>
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --primary-dark: #1e40af;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .info-header {
+            background: white;
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .info-header div span {
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        h1 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        p { margin: 0 0 16px 0; }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--primary-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 0.875rem;
+            transition: background-color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover { background-color: var(--primary-dark); }
+
+        .button-container {
+            margin-top: 32px;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: var(--border-color);
+            margin: 24px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            background: white;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            text-align: left;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) { background-color: #f8fafc; }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: none;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="info-header">
+        <div>Name: <span>Ashay Vitthal Patakare</span></div>
+        <div>Roll No: <span>56</span> | Batch: <span>S3</span></div>
+        <div>Experiment No: <span>2</span></div>
+    </div>
+
+    <div class="container">
+        <h1>Basic HTML Tags Demonstration</h1>
+
+        <div class="card">
+            <h2>Headings and Paragraphs</h2>
+            <p>This is a paragraph. HTML is used to create web pages.</p>
+            <p>
+                This text is <b>bold</b>. <br>
+                This text is <i>italic</i>. <br>
+                This text is <u>underlined</u>.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Links and Media</h2>
+            <p><a href="https://www.example.com" target="_blank"
+                    style="color: var(--primary-blue); font-weight: 500;">Visit Example.com</a></p>
+            <br>
+            <div style="text-align: center;">
+                <img src="https://i.pinimg.com/736x/65/97/d4/6597d477b9cdd5f8ac5a3e43b14b02c3.jpg" alt="Sample Image"
+                    style="width: 250px; border-radius: 8px; box-shadow: var(--shadow);">
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Simple Lists</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div>
+                    <h3>Unordered List</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Ordered List</h3>
+                    <ol>
+                        <li>First</li>
+                        <li>Second</li>
+                        <li>Third</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <a href="../index.html" class="btn">⬅ Home</a>
+            <a href="../Experiment_3/Text_Formating.html" class="btn">Continue ➡</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

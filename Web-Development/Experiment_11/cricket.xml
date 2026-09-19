@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="cricket.xsl"?>
+
+<cricketers>
+
+    <player>
+        <name>Ashay Vitthal Patakare</name>
+        <jersey>56</jersey>
+        <team>India</team>
+        <role>All-rounder</role>
+    </player>
+
+    <player>
+        <name>Virat Kohli</name>
+        <jersey>18</jersey>
+        <team>India</team>
+        <role>Batsman</role>
+    </player>
+
+    <player>
+        <name>Rohit Sharma</name>
+        <jersey>45</jersey>
+        <team>India</team>
+        <role>Batsman</role>
+    </player>
+
+    <player>
+        <name>MS Dhoni</name>
+        <jersey>7</jersey>
+        <team>India</team>
+        <role>Wicket Keeper</role>
+    </player>
+
+</cricketers>

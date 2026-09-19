@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashay Patakare Resume - Lab Archive</title>
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --primary-dark: #1e40af;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .info-header {
+            background: white;
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .info-header div span {
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        h1 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        p { margin: 0 0 16px 0; }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--primary-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 0.875rem;
+            transition: background-color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover { background-color: var(--primary-dark); }
+
+        .button-container {
+            margin-top: 32px;
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: var(--border-color);
+            margin: 24px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            background: white;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            text-align: left;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) { background-color: #f8fafc; }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: none;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            background: #000;
+        }
+    </style>
+    <style>
+        .resume-container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 50px;
+            box-shadow: var(--shadow);
+            text-align: left;
+            border-radius: 24px;
+            border: 1px solid var(--card-border);
+        }
+
+        .resume-header {
+            text-align: center;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        .resume-header h1 {
+            margin: 0;
+            background: linear-gradient(to right, #00d2ff, #3a7bd5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 3rem;
+        }
+
+        .contact {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 15px;
+            letter-spacing: 0.1em;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section h2 {
+            color: var(--primary-accent);
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .bold {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        p {
+            color: var(--text-muted);
+        }
+
+        ul {
+            margin: 15px 0 15px 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="info-header">
+        <div>Name: <span>Ashay Vitthal Patakare</span></div>
+        <div>Roll No: <span>56</span> | Batch: <span>S3</span></div>
+        <div>Experiment No: <span>10</span></div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <h1>Professional Resume</h1>
+
+        <div class="resume-container">
+            <div class="resume-header">
+                <h1>Ashay Patakare</h1>
+                <p class="contact">
+                    📞 7499325557 | 📧 patakareashay@gmail.com
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Career Objective</h2>
+                <p>
+                    Motivated Computer Science Engineering student seeking opportunities to apply technical skills
+                    in real-world projects and contribute to innovative solutions.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Education</h2>
+                <p class="bold">B.Tech in Computer Science Engineering</p>
+                <p>D.Y. Patil College of Engineering & Technology, Kolhapur</p>
+                <p>Expected Graduation: 2028</p>
+            </div>
+
+            <div class="section">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Programming: C, Java, Python</li>
+                    <li>Web: HTML, CSS, Basic JavaScript</li>
+                    <li>Concepts: Data Structures, Problem Solving</li>
+                    <li>Tools: VS Code, Git</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Projects</h2>
+                <p class="bold">Helmet Tracking System</p>
+                <ul>
+                    <li>Developed a system to detect helmet usage for safety monitoring.</li>
+                </ul>
+
+                <p class="bold">Pulse Voice Website</p>
+                <ul>
+                    <li>Created a website with voice-based interaction features.</li>
+                </ul>
+
+                <p class="bold">Smart Parking System</p>
+                <ul>
+                    <li>Built a web-based parking management system with real-time tracking.</li>
+                </ul>
+
+                <p class="bold">Fire Extinguisher Robot</p>
+                <ul>
+                    <li>Designed a robot capable of detecting and extinguishing fire.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Personal Details</h2>
+                <p>Languages: English, Hindi, Marathi</p>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <a href="../Experiment_9/Form.html" class="btn">⬅ Back</a>
+            <a href="../index.html" class="btn">🏠 Home</a>
+            <a href="../Experiment_11/cricket.xml" class="btn">Continue ➡</a>
+        </div>
+    </div>
+
+</body>
+</html>
