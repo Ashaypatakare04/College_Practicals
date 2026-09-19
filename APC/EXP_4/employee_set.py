@@ -1,0 +1,5 @@
+p1=set({"a","b","c","d"})
+p2=set({"a","e","c","f"})
+print("Employee working on both project: ",p1.intersection(p2))
+print("Employee working on only one project: ",p1.difference(p2))
+print("Total unique employee working on both projects: ",p1.union(p2))

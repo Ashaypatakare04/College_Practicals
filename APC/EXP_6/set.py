@@ -1,0 +1,18 @@
+p1={"a","b","c","d"}
+p2={"a","e","c","f"}
+print(p1)
+print(p2)
+p1.add('g')
+print("After add: ",p1)
+print("Intersection: ",p1.intersection(p2))
+print("Difference: ",p1.difference(p2))
+print("Union: ",p1.union(p2))
+print("symmetric_difference: ",p1.symmetric_difference(p2))
+print(p1.issubset(p2))       
+print(p1.issuperset(p2))    
+print(p1.isdisjoint(p2))     
+print("a" in p1)     
+print("e" not in p2)
+p1.clear()
+print(p1) 
+print(len(p1)) 
