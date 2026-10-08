@@ -1,20 +1,19 @@
-def q32_add(a, b):
+def add(a, b):
     return a + b
 
-def q32_subtract(a, b):
+def subtract(a, b):
     return a - b
 
-def q32_multiply(a, b):
+def multiply(a, b):
     return a * b
 
-def q32_divide(a, b):
+def divide(a, b):
     return a / b
 
-def q32_calculate(func, a, b):
+def calculate(func, a, b):
     return func(a, b)
 
-if __name__ == "__main__":
-    print(q32_calculate(q32_add, 10, 5))
-    print(q32_calculate(q32_subtract, 10, 5))
-    print(q32_calculate(q32_multiply, 10, 5))
-    print(q32_calculate(q32_divide, 10, 5))
+print("Addition:", calculate(add, 10, 5))
+print("Subtraction:", calculate(subtract, 10, 5))
+print("Multiplication:", calculate(multiply, 10, 5))
+print("Division:", calculate(divide, 10, 5))

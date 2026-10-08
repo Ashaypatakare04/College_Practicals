@@ -1,41 +1,41 @@
-def q9_largest(lst):
+def largest(lst):
     large = lst[0]
     for x in lst:
         if x > large:
             large = x
     return large
 
-def q13_average(lst):
+def average(lst):
     return sum(lst) / len(lst)
 
-def q14_count_element(lst, element):
+def count_element(lst, element):
     count = 0
     for x in lst:
         if x == element:
             count += 1
     return count
 
-def q15_unique(lst):
+def unique(lst):
     result = []
     for x in lst:
         if x not in result:
             result.append(x)
     return result
 
-def q16_second_largest(lst):
+def second_largest(lst):
     values = list(set(lst))
     values.sort()
     return values[-2]
 
-def q22_statistics(lst):
+def statistics(lst):
     total = sum(lst)
     return min(lst), max(lst), total, total / len(lst)
 
-if __name__ == "__main__":
-    data = [10, 20, 20, 30, 40, 50]
-    print(q9_largest(data))
-    print(q13_average(data))
-    print(q14_count_element(data, 20))
-    print(q15_unique(data))
-    print(q16_second_largest(data))
-    print(q22_statistics(data))
+data = [10, 20, 20, 30, 40, 50]
+
+print("Largest Element:", largest(data))
+print("Average:", average(data))
+print("Element Count:", count_element(data, 20))
+print("Unique Elements:", unique(data))
+print("Second Largest:", second_largest(data))
+print("Statistics:", statistics(data))

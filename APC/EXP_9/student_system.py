@@ -1,10 +1,10 @@
-def q23_total(marks):
+def total(marks):
     return sum(marks)
 
-def q23_percentage(marks):
+def percentage(marks):
     return sum(marks) / 5
 
-def q23_grade(percentage):
+def grade(percentage):
     if percentage >= 90:
         return "A+"
     elif percentage >= 80:
@@ -17,38 +17,33 @@ def q23_grade(percentage):
         return "D"
     return "F"
 
-def q23_process_students(students):
+def process_students(students):
     results = []
-    for name, roll, marks in students:
-        total = q23_total(marks)
-        percentage = q23_percentage(marks)
-        grade = q23_grade(percentage)
-        results.append({
-            "name": name,
-            "roll": roll,
-            "total": total,
-            "percentage": percentage,
-            "grade": grade
-        })
 
-    class_average = sum(x["percentage"] for x in results) / len(results)
-    highest = max(results, key=lambda x: x["percentage"])
-    lowest = min(results, key=lambda x: x["percentage"])
+    for name, roll, marks in students:
+        t = total(marks)
+        p = percentage(marks)
+        g = grade(p)
+        results.append((name, roll, t, p, g))
+
+    class_average = sum(x[3] for x in results) / len(results)
+    highest = max(results, key=lambda x: x[3])
+    lowest = min(results, key=lambda x: x[3])
 
     return results, class_average, highest, lowest
 
-if __name__ == "__main__":
-    students = [
-        ("Amit", 1, [80, 85, 90, 75, 88]),
-        ("Rahul", 2, [70, 75, 80, 72, 78]),
-        ("Priya", 3, [90, 92, 88, 95, 91])
-    ]
+students = [
+    ("Amit", 1, [80, 85, 90, 75, 88]),
+    ("Rahul", 2, [70, 75, 80, 72, 78]),
+    ("Priya", 3, [90, 92, 88, 95, 91])
+]
 
-    results, average, highest, lowest = q23_process_students(students)
+results, average, highest, lowest = process_students(students)
 
-    for student in results:
-        print(student)
+print("Student Results:")
+for student in results:
+    print(student)
 
-    print("Class Average:", average)
-    print("Highest:", highest)
-    print("Lowest:", lowest)
+print("Class Average:", average)
+print("Highest Scorer:", highest)
+print("Lowest Scorer:", lowest)

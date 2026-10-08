@@ -2,12 +2,12 @@ balance = 0
 transactions = []
 books = {}
 
-def q24_deposit(amount):
+def deposit(amount):
     global balance
     balance += amount
     transactions.append("Deposited " + str(amount))
 
-def q24_withdraw(amount):
+def withdraw(amount):
     global balance
     if amount <= balance:
         balance -= amount
@@ -15,42 +15,44 @@ def q24_withdraw(amount):
         return True
     return False
 
-def q24_balance_enquiry():
+def balance_enquiry():
     return balance
 
-def q24_transaction_history():
+def transaction_history():
     return transactions
 
-def q25_add_book(book):
+def add_book(book):
     books[book] = True
 
-def q25_issue_book(book):
+def issue_book(book):
     if book in books and books[book]:
         books[book] = False
         return True
     return False
 
-def q25_return_book(book):
+def return_book(book):
     if book in books:
         books[book] = True
         return True
     return False
 
-def q25_search_book(book):
+def search_book(book):
     return book in books
 
-def q25_available_books():
+def available_books():
     return [book for book in books if books[book]]
 
-if __name__ == "__main__":
-    q24_deposit(5000)
-    print(q24_withdraw(1000))
-    print(q24_balance_enquiry())
-    print(q24_transaction_history())
+print("Banking System")
+deposit(5000)
+print("Withdrawal Successful:", withdraw(1000))
+print("Current Balance:", balance_enquiry())
+print("Transaction History:", transaction_history())
 
-    q25_add_book("Python")
-    q25_add_book("AI")
-    print(q25_issue_book("Python"))
-    print(q25_available_books())
-    q25_return_book("Python")
-    print(q25_available_books())
+print()
+print("Library System")
+add_book("Python")
+add_book("AI")
+print("Book Issued:", issue_book("Python"))
+print("Available Books:", available_books())
+return_book("Python")
+print("Available Books After Return:", available_books())
