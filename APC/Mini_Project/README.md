@@ -13,6 +13,7 @@ A desktop application built with Python and Tkinter for managing student academi
 - **Delete Record:** Remove records with a confirmation prompt.
 - **Auto Calculation:** Automatically computes percentage and assigns letter grades (A+ to F).
 - **Preview Tool:** Preview percentage and grade before saving.
+- **Data Visualization:** Interactive Matplotlib charts displaying percentage comparisons (bar chart) and grade distribution (pie chart).
 - **Local Persistence:** Saves and loads data automatically from a local JSON file (`data/students.json`).
 - **Sort by Performance:** Sort records by percentage in descending order.
 
@@ -39,7 +40,7 @@ Mini_Project/
 | File | Description |
 | :--- | :--- |
 | `main.py` | Initializes High-DPI display settings and launches the application. |
-| `gui.py` | Builds the Tkinter user interface, input forms, and data tables. |
+| `gui.py` | Builds the Tkinter user interface, input forms, data tables, and Matplotlib visualizations. |
 | `student.py` | Contains OOP models (`Person` base class, `Student` child class), inheritance, and grade logic. |
 | `storage.py` | Manages reading and writing data to `data/students.json` with error handling. |
 | `validator.py` | Validates student IDs, names, and marks using regular expressions. |
@@ -50,7 +51,11 @@ Mini_Project/
 ## How to Run
 
 ### Requirements
-- Python 3.8+ (Uses only Python Standard Library — no external packages required)
+- Python 3.8+
+- Matplotlib:
+  ```bash
+  pip install matplotlib
+  ```
 
 ### Run Command
 ```bash

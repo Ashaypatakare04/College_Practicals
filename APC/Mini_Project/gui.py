@@ -301,6 +301,19 @@ class StudentManagementApp:
 
         tk.Button(
             search_card,
+            text="📊 View Charts",
+            command=self.show_charts,
+            bg="#ECFDF5",
+            fg="#047857",
+            font=("Segoe UI", 8, "bold"),
+            relief="flat",
+            padx=10,
+            pady=2,
+            cursor="hand2"
+        ).pack(side="right", padx=4)
+
+        tk.Button(
+            search_card,
             text="Top Performers (Sort %)",
             command=self.handle_sort_percentage,
             bg="#F3E8FF",
@@ -527,6 +540,54 @@ class StudentManagementApp:
         sorted_students = self.storage.sort_students(by="percentage", reverse=True)
         self.populate_treeview(sorted_students)
         self.set_status("Sorted students by Percentage.")
+
+    def show_charts(self) -> None:
+        """Display student performance charts using Matplotlib."""
+        try:
+            import matplotlib.pyplot as plt
+        except ImportError:
+            messagebox.showerror("Error", "Matplotlib is not installed. Run: pip install matplotlib")
+            return
+
+        students = self.storage.get_all_students()
+        if not students:
+            messagebox.showwarning("No Data", "Please add students first to display charts.")
+            return
+
+        # 1. Bar Chart Data (Names and Percentages)
+        names = [s.name.split()[0] for s in students]
+        percentages = [s.percentage for s in students]
+
+        # 2. Pie Chart Data (Grade Counts)
+        grades = [s.grade for s in students]
+        unique_grades = sorted(set(grades))
+        grade_counts = [grades.count(g) for g in unique_grades]
+
+        # Create Matplotlib Figure with 2 Subplots
+        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4.5))
+        fig.canvas.manager.set_window_title("Student Analytics & Visualizations")
+
+        # Subplot 1: Bar Chart of Percentages
+        bars = ax1.bar(names, percentages, color="#3B82F6", edgecolor="#1E3A8A")
+        ax1.axhline(40, color="red", linestyle="--", linewidth=1, label="Pass Mark (40%)")
+        ax1.set_ylim(0, 100)
+        ax1.set_title("Student Percentage Comparison", fontsize=11, fontweight="bold")
+        ax1.set_ylabel("Percentage (%)")
+        ax1.legend(loc="upper right")
+        ax1.grid(axis="y", linestyle=":", alpha=0.6)
+
+        for bar in bars:
+            height = bar.get_height()
+            ax1.text(bar.get_x() + bar.get_width() / 2, height + 1.5, f"{height:.1f}%",
+                     ha="center", va="bottom", fontsize=8)
+
+        # Subplot 2: Pie Chart of Grade Breakdown
+        ax2.pie(grade_counts, labels=unique_grades, autopct="%1.1f%%",
+                startangle=140, colors=["#10B981", "#3B82F6", "#F59E0B", "#EF4444"])
+        ax2.set_title("Grade Distribution", fontsize=11, fontweight="bold")
+
+        plt.tight_layout()
+        plt.show()
 
     def refresh_table(self) -> None:
         """Reload and display all records."""
