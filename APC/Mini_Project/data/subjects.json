@@ -1,0 +1,22 @@
+[
+    {
+        "id": "SUB01",
+        "name": "Advanced Python",
+        "max_marks": 100.0
+    },
+    {
+        "id": "SUB02",
+        "name": "DBMS",
+        "max_marks": 100.0
+    },
+    {
+        "id": "SUB03",
+        "name": "Computer Networks",
+        "max_marks": 100.0
+    },
+    {
+        "id": "SUB04",
+        "name": "Advance Java",
+        "max_marks": 100.0
+    }
+]

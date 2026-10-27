@@ -1,0 +1,62 @@
+[
+    {
+        "student_id": "TY01",
+        "name": "Aarav Sharma",
+        "class_div": "TY CSE A",
+        "marks": {
+            "Advanced Python": 88.0,
+            "DBMS": 92.0,
+            "Computer Networks": 85.0
+        },
+        "percentage": 88.33,
+        "grade": "A"
+    },
+    {
+        "student_id": "TY03",
+        "name": "Rohan Patil",
+        "class_div": "TY CSE B",
+        "marks": {
+            "Advanced Python": 64.0,
+            "DBMS": 70.0,
+            "Computer Networks": 68.0
+        },
+        "percentage": 67.33,
+        "grade": "B"
+    },
+    {
+        "student_id": "TY04",
+        "name": "Sneha Deshmukh",
+        "class_div": "TY CSE B",
+        "marks": {
+            "Advanced Python": 78.0,
+            "DBMS": 82.0,
+            "Computer Networks": 75.0
+        },
+        "percentage": 78.33,
+        "grade": "B+"
+    },
+    {
+        "student_id": "TY05",
+        "name": "Ashay Patakare",
+        "class_div": "TY CSE A",
+        "marks": {
+            "Advanced Python": 93.0,
+            "DBMS": 91.0,
+            "Computer Networks": 89.0
+        },
+        "percentage": 91.0,
+        "grade": "A+"
+    },
+    {
+        "student_id": "TY06",
+        "name": "Ratnesh Chavan",
+        "class_div": "TY CSE A",
+        "marks": {
+            "Advanced Python": 80.0,
+            "DBMS": 73.0,
+            "Computer Networks": 82.0
+        },
+        "percentage": 78.33,
+        "grade": "B+"
+    }
+]
