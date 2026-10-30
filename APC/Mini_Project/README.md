@@ -33,9 +33,7 @@ Mini_Project/
 ├── student.py           # Person (base class) and Student (derived class) models
 ├── storage.py           # JSON persistence, CRUD operations, migration & backup managers
 ├── validator.py         # Input validation, regex rules, and custom exceptions
-├── test_system.py       # Comprehensive 10-point unit and integration test suite
 ├── README.md            # Project documentation
-├── VIVA_QUESTIONS.md    # Viva preparation guide for college oral examination
 └── data/
     ├── students.json    # JSON storage file for student records
     ├── subjects.json    # JSON storage file for configured subjects
@@ -54,7 +52,6 @@ Mini_Project/
 | `student.py` | Contains OOP models (`Person` base class, `Student` child class), inheritance, and dynamic grading logic. |
 | `storage.py` | Manages `SubjectStorageManager` and `StudentStorageManager` with automatic backup and migration. |
 | `validator.py` | Validates student IDs, names, marks (0 to max marks), and subject names (case-insensitive uniqueness). |
-| `test_system.py` | Verifies all 10 core syllabus requirements without launching GUI. |
 | `data/students.json` | Stores student data locally in JSON format with stable subject IDs. |
 | `data/subjects.json` | Stores curriculum subjects configuration (ID, name, max marks). |
 
